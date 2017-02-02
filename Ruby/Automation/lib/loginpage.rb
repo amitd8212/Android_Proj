@@ -19,7 +19,6 @@ class LoginPage
 			#Logout method
 			logout = browser.link(text: 'Log Out')
 			logout.click
-
 		end
  
 
