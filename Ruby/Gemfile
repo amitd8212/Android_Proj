@@ -1,0 +1,14 @@
+source 'https://rubygems.org'
+
+#Capybara Gem
+gem 'capybara', '~> 2.7'
+
+#Selenium
+gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
+
+#Json
+gem 'json', '~> 2.0', '>= 2.0.2'
+
+#Minitest
+gem 'minitest', '~> 5.10', '>= 5.10.1'
+gem 'minitest-capybara', '~> 0.8.2'
