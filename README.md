@@ -7,4 +7,4 @@
   5. Animations.
 
 # Ruby
-  1. Google Search
+  1. Automation
