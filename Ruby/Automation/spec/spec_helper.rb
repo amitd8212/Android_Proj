@@ -3,7 +3,6 @@ require 'watir/rspec'
 require 'page-object'
 
 
-
 RSpec.configure do |config|
   # Use Watir::RSpec::HtmlFormatter to get links to the screenshots, html and
   # all other files created during the failing examples.
