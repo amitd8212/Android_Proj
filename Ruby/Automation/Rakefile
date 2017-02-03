@@ -3,10 +3,14 @@ require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 
 begin
+
+
+	#desc "Run API Test Cases"
 	
   require 'rspec/core/rake_task'
-  RSpec::Core::RakeTask.new(:spec)
-  task default: :spec
+  RSpec::Core::RakeTask.new(:spec) do |s|
+  s.pattern = Dir.glob('**/*_test.rb')
+end
 rescue LoadError
   # rspec not available
 end

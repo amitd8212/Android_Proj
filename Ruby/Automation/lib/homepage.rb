@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec/spec_helper'
 
 $home_page_url = "https://app.recurly.com/login?"
 

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec/spec_helper'
 
 #This Page will hold all objects on the Login Page.
 
