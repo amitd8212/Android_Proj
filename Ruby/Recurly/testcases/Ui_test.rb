@@ -19,10 +19,12 @@ class UiTests < Test::Unit::TestCase
 
   describe "Account" do
     before {
+    @account_code = "12345"
     @user = "amitd"
     @email_val = "Jay8212@hotmail.com"
     @password_val = "password123"
     @expected_account_count = 2
+    @api_page = ApiPage.new(browser)
     @url = UrlValues.new(browser)
     @login_page = LoginPage.new(browser)
     @home_page = HomePage.new(browser)
@@ -50,6 +52,11 @@ class UiTests < Test::Unit::TestCase
       assert (@browser.div :css => '.Pagination-left').exists?
       accounts = @account_page.validate_accounts
       assert accounts.size == @expected_account_count
+    end
+
+    it 'validates last created account' do
+      puts "Validating latest account created"
+      @api_page.get_accounts(@account_code)
     end
 
   end

@@ -1,6 +1,9 @@
 # Configuration for watir-rspec
 require 'watir/rspec'
 require 'page-object'
+require 'rubygems'
+
+#config is the RSpec configuration and can be used just like it
 
 
 RSpec.configure do |config|
