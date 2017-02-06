@@ -282,33 +282,12 @@ a {
 <div id="div_group_1" class="example_group passed">
   <dl style="margin-left: 0px;">
   <dt id="example_group_1" class="passed">API Testing</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_1');</script>
-    <script type="text/javascript">makeRed('example_group_1');</script>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">creates a new account and then validates creation</span>
-      <span class="duration">11.42219s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>Failure/Error: @account_creation = RestClient::Request.execute(method: :post, url: @url, user: @api_key, headers: @headers, timeout: 10, payload: @payload)
-
-RestClient::UnprocessableEntity:
-  422 Unprocessable Entity</pre></div>
-        <div class="backtrace"><pre>./api_test.rb:35:in `block (2 levels) in &lt;class:ApiTests&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">33</span>                        <span class="instance-variable">@headers</span> = {<span class="key">Authorization</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Basic </span><span class="delimiter">&quot;</span></span> + <span class="instance-variable">@api_key</span>, <span class="key">content_type</span>: <span class="string"><span class="delimiter">'</span><span class="content">application/xml; charset=utf-8</span><span class="delimiter">'</span></span>, <span class="key">x_api_version</span>: <span class="string"><span class="delimiter">'</span><span class="content">2.4</span><span class="delimiter">'</span></span>}
-<span class="linenum">34</span>                        <span class="instance-variable">@payload</span> = <span class="instance-variable">@read_file</span>
-<span class="offending"><span class="linenum">35</span>                        <span class="instance-variable">@account_creation</span> = <span class="constant">RestClient</span>::<span class="constant">Request</span>.execute(<span class="key">method</span>: <span class="symbol">:post</span>, <span class="key">url</span>: <span class="instance-variable">@url</span>, <span class="key">user</span>: <span class="instance-variable">@api_key</span>, <span class="key">headers</span>: <span class="instance-variable">@headers</span>, <span class="key">timeout</span>: <span class="integer">10</span>, <span class="key">payload</span>: <span class="instance-variable">@payload</span>)</span>
-<span class="linenum">36</span>                        <span class="instance-variable">@account_code</span> = <span class="instance-variable">@api_page</span>.create_account(<span class="instance-variable">@account_creation</span>)
-<span class="linenum">37</span>                        <span class="instance-variable">@created_account_code</span> = <span class="instance-variable">@api_page</span>.get_accounts(<span class="instance-variable">@input</span>, <span class="instance-variable">@xml_doc</span>)                        </code></pre><span>
-<a href='browser_191720_1_1.html'>HTML</a>&nbsp;
-<a href='screenshot_191719_1_1.png'>Screenshot</a>&nbsp;
-</span>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">creates a new account and then validates creation</span><span class='duration'>10.67016s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>14.89001 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "1 example, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>12.77889 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "1 example, 0 failures";</script>
 </div>
 </div>
 </body>
