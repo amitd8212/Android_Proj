@@ -22,8 +22,7 @@ class UiTests < Test::Unit::TestCase
     @account_code = "12345"
     @user = "amitd"
     @email_val = "Jay8212@hotmail.com"
-    @password_val = "password123"
-    @expected_account_count = 2
+    @password_val = "password123" 
     @api_page = ApiPage.new(browser)
     @url = UrlValues.new(browser)
     @login_page = LoginPage.new(browser)
@@ -31,6 +30,13 @@ class UiTests < Test::Unit::TestCase
     @account_page = AccountPage.new(browser)
     @browser.goto(@url.url_loc(@user, "HOME"))
     @login_page.login(@email_val, @password_val)
+    @url = "#{@base_url}" + "/accounts"
+    @headers = {Authorization: "Basic " + @api_key, content_type: 'application/xml; charset=utf-8', x_api_version: '2.4'}
+    @subdomain = Recurly.subdomain  = 'amitd'
+    @api_key = Recurly.api_key   = '1d0ca939e0074107a75b93051e4fc9c4'
+    @base_url = "https://#{@subdomain}.recurly.com/v2"
+    @input_file = RestClient::Request.execute(method: :get, url: @url, user: @api_key, headers: @headers, timeout: 10)
+    @expected_account_count = @api_page.get_total_acounts(@input_file)
   }
 
   after {
