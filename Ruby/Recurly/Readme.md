@@ -18,8 +18,9 @@
   
 #NOTES:
   1. To run the API Tests and avoid failures make sure to update the account_code, account_code portion of the account node, and the vat_number.  Those values need to be updated for each run.
-     A. <account href="https://amitd.recurly.com/v2/accounts/333111"> could be changed to <account    href="https://amitd.recurly.com/v2/accounts/333112"> for a second run.
      
-     B. <account_code>333111</account_code> should then also be changed to <account_code>333112</account_code> for a second run.
+     A. "\<account href="https://amitd.recurly.com/v2/accounts/333111"> could be changed to "\<account    href="https://amitd.recurly.com/v2/accounts/333112"> for a second run."
      
-     C. <vat_number>1223343567487</vat_number> can be changed to any other value for a second run, such as                <vat_number>12343421487</vat_number>
+     B. "\<account_code>333111"\</account_code> should then also be changed to "\<account_code>333112"\</account_code> for a second run.
+     
+     C. "\<vat_number>1223343567487"\</vat_number> can be changed to any other value for a second run, such as                "\<vat_number>12343421487"\</vat_number>
