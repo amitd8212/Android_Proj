@@ -32,6 +32,7 @@ class ApiTests < Test::Unit::TestCase
 			@payload = @read_file
 			@account_creation = RestClient::Request.execute(method: :post, url: @url, user: @api_key, headers: @headers, timeout: 10, payload: @payload)
 			@input_file = RestClient::Request.execute(method: :get, url: @url, user: @api_key, headers: @headers, timeout: 10)
+			@api_page.get_total_acounts(@input_file)
 			@expected_account_code = @api_page.create_account(@read_file)
 			@created_account_code = @api_page.get_accounts(@input_file)
 			@api_page.validate_accounts(@created_account_code, @expected_account_code)

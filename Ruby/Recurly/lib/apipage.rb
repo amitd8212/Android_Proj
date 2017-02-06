@@ -19,6 +19,13 @@ class ApiPage
 		return @xml_doc_1.css('//account_code').first.text
 	end
 
+	def get_total_acounts(input_file)
+		@xml_doc = Nokogiri::HTML(input_file)
+		@doc = @xml_doc.css('//account_code')
+		return @doc.count
+	end
+
+
 
 	def get_accounts(input_file)
 		#Return account code from xml file.
@@ -29,9 +36,9 @@ class ApiPage
 	def validate_accounts(created_account_code, expected_account_code)
 		assert created_account_code == expected_account_code
 		if created_account_code == expected_account_code
-			puts "Account created correctly"
+			puts "\nAccount created correctly"
 		else
-			puts "Account was not created correctly"
+			puts "\nAccount was not created correctly"
 		end
 	end
 
